@@ -5,7 +5,7 @@ export function renderContact() {
 
       <!-- Formulaire de contact -->
       <section id="formulaire-contact" class="section">
-        <h2 class="section-title">Formulaire contact</h2>
+        <h2 class="section-title">Formulaire de contact</h2>
         <form id="contactForm" class="contact-form" action="https://formspree.io/f/mgverwov" method="POST">
           <div class="form-group">
             <label for="name">Nom</label>
@@ -26,17 +26,21 @@ export function renderContact() {
           <div class="g-recaptcha" data-sitekey="${
             import.meta.env.VITE_RECAPTCHA_SITE_KEY
           }"></div>
-          <button type="submit" class="btn-submit">Envoyer</button>
+          <button type="submit" class="btn-submit">Envoyer le message</button>
         </form>
         <div id="responseMessage" class="response-message" style="display:none;"></div>
       </section>
 
+      <section id="image-section" class="image-section">
+        <img src="images/Herisson.png" alt="Hérisson" class="image-hero">
+      </section>
+
       <!-- Formulaire presse avec seulement l'email affiché -->
       <section id="formulaire-presse" class="section">
-        <h2 class="section-title">Formulaire Presse</h2>
+        <h2 class="section-title">Press room</h2>
         <form id="pressForm" class="contact-form" action="https://formspree.io/f/mgverwov" method="POST">
           <div class="form-group">
-            <label for="press-email">Entrez votre email professionnel pour accéder au dossier de presse</label>
+            <label for="press-email">Entrez votre email professionnel pour recevoir le dossier de presse</label>
             <input type="email" id="press-email" name="press-email" required>
           </div>
           <!-- Champs cachés mais envoyés avec des valeurs par défaut -->
@@ -44,7 +48,7 @@ export function renderContact() {
           <div class="g-recaptcha" data-sitekey="${
             import.meta.env.VITE_RECAPTCHA_SITE_KEY
           }"></div>
-          <button type="submit" class="btn-submit">Accéder au dossier</button>
+          <button type="submit" class="btn-submit">Envoyer la demande</button>
         </form>
         <div id="responseMessage" class="response-message" style="display:none;"></div>
       </section>

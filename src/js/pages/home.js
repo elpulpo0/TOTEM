@@ -1,21 +1,12 @@
 export function renderHome() {
   return `
     <style>
-      /* Style général pour centrer tout le contenu */
-      body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center; /* Centrer le contenu horizontalement */
-        align-items: center; /* Centrer verticalement */
-        min-height: 100vh; /* Assure que le corps occupe toute la hauteur */
-        flex-direction: column;
-      }
+      
 
       .section_home {
         text-align: center;
-        padding: 20px;
+        margin-top: 20px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         align-items: center; /* Centre horizontalement */
@@ -25,7 +16,7 @@ export function renderHome() {
       }
 
       .page-title {
-        font-size: 36px;
+        font-size: 50px;
         margin-bottom: 20px;
         font-weight: bold;
       }

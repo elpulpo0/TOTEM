@@ -18,7 +18,7 @@
 body {
   font-family: "Barlow", sans-serif;
   color: var(--color-gray);
-  background-color: var(--color-bg);
+  background-color: var(--color-green);
   line-height: 1.6;
 }
 
@@ -43,7 +43,7 @@ nav {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -170,7 +170,7 @@ main {
 }
 
 .page-title {
-  color: var(--color-blue);
+  color: var(--color-grey);
   margin-bottom: 2rem;
   font-size: 2.5rem;
   position: relative;
@@ -573,3 +573,64 @@ li {
   font-style: italic;
   color: var(--color-medium-dark);
 }
+
+/* Container pour le logo */
+.logo-container {
+  display: inline-block;
+  margin-right: 20px; /* Ajuste l'espace entre le logo et les éléments du menu */
+  vertical-align: middle;
+  cursor: pointer; /* Change le curseur en main quand on survole le logo */
+}
+
+/* Logo lui-même */
+.logo {
+  height: 120px; /* Ajuste la taille du logo selon tes préférences */
+  width: auto;
+}
+
+/* Adaptation mobile (si nécessaire) */
+@media (max-width: 768px) {
+  .logo {
+    height: 30px; /* Réduit la taille du logo sur mobile */
+  }
+}
+
+/* Footer */
+.footer {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-logo-container {
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  width: 100px; /* Ajustez la taille selon vos besoins */
+}
+
+.legal-link {
+  color: white;
+  text-decoration: none;
+}
+
+.legal-link:hover {
+  text-decoration: underline;
+}
+
+.section_lost {
+  margin-top: 80px;
+}
+
+.image-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        margin: 20px 0;
+      }
+
+      .image-hero {
+        max-height: 100%;
+      }

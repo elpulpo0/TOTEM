@@ -68,7 +68,7 @@ export class Router {
 
   notFound() {
     return `
-      <div class="section">
+      <div class="section section_lost">
         <h1 class="page-title">Page non trouvée</h1>
         <p>La page que vous recherchez n'existe pas.</p>
       </div>

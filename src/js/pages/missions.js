@@ -31,6 +31,10 @@ export function renderMissions() {
         <p>Au TOTEM nous sommes convaincus que la préservation des espèces allie tous ces domaines et c’est par une action globale que nous réduirons l’impact de l’homme sur la biodiversité.</p>
       </section>
 
+      <section id="image-section" class="image-section">
+        <img src="images/Herisson.png" alt="Hérisson" class="image-hero">
+      </section>
+
       <section id="nos-outils" class="section">
         <h2 class="section-title">Nos outils</h2>
         

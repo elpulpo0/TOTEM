@@ -27,6 +27,10 @@ export function renderEquipe() {
         </div>
       </section>
 
+      <section id="image-section" class="image-section">
+        <img src="images/Ecureuil.png" alt="Ecureuil" class="image-hero">
+      </section>
+
       <section id="le-conseil-d-administration" class="section">
         <h2 class="section-title">Le conseil d'administration</h2>
         <div class="board-members">

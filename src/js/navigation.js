@@ -6,11 +6,8 @@ export const menuStructure = {
     "Le contexte",
     "Quelques chiffres",
   ],
-  "Nos actions et nos projets": [
-    "La ligne SOS",
-    "Les centres de soins"
-  ],
-  "Dons et Adhésion": {
+  "Nos actions et nos projets": ["La ligne SOS", "Les centres de soins"],
+  "Dons et Adhésions": {
     "Appel au don CDS Var": ["Project book", "Hello asso Don"],
     "Adhésion totem": ["Statuts", "Hello asso Adhésion"],
   },
@@ -32,6 +29,23 @@ export function createNavigation() {
   const navContainer = document.createElement("div");
   navContainer.className = "nav-container";
 
+  // Ajout du logo dans la barre de navigation
+  const logoContainer = document.createElement("div");
+  logoContainer.className = "logo-container";
+  const logo = document.createElement("img");
+  logo.src = "images/Logo_totem.png"; // Remplace avec le bon chemin vers ton image
+  logo.alt = "Totem Logo";
+  logo.className = "logo";
+
+  // Rendre le logo cliquable pour retourner à la page d'accueil
+  logo.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.hash = ""; // Remet le hash à vide pour revenir à l'accueil
+  });
+
+  logoContainer.appendChild(logo);
+
+  // Création du menu
   const menuList = document.createElement("ul");
   menuList.className = "menu-items";
 
@@ -113,6 +127,8 @@ export function createNavigation() {
     menuList.classList.toggle("active");
   });
 
+  // Ajout du logo et du menu dans la nav
+  navContainer.appendChild(logoContainer);
   navContainer.appendChild(hamburger);
   navContainer.appendChild(menuList);
   nav.appendChild(navContainer);

@@ -35,6 +35,10 @@ export function renderSituationPACA() {
         </div>
       </section>
 
+      <section id="image-section" class="image-section">
+        <img src="images/Mouette.png" alt="Mouette" class="image-hero">
+      </section>
+
       <section id="le-contexte" class="section">
         <div class="context-container">
           <div class="context-card">
@@ -55,6 +59,10 @@ export function renderSituationPACA() {
             </p>
           </div>
         </div>
+      </section>
+
+      <section id="image-section" class="image-section">
+        <img src="images/Ecureuil.png" alt="Ecureuil" class="image-hero">
       </section>
 
       <section id="quelques-chiffres" class="section">
