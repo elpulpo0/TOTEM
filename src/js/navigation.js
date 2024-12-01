@@ -1,5 +1,5 @@
 export const menuStructure = {
-  "Nos Missions": ["Nos missions", "Nos outils"],
+  "Nos missions": ["Nos missions", "Nos outils"],
   "L'équipe": ["Les fondatrices", "Le conseil d'administration"],
   "La situation en PACA": [
     "Des espèces à enjeux",
@@ -7,11 +7,11 @@ export const menuStructure = {
     "Quelques chiffres",
   ],
   "Nos actions et nos projets": ["La ligne SOS", "Les centres de soins"],
-  "Dons et Adhésions": {
+  "Dons et adhésions": {
     "Appel au don CDS Var": ["Project book", "Hello asso Don"],
     "Adhésion totem": ["Statuts", "Hello asso Adhésion"],
   },
-  "Contact et Presse": ["Formulaire contact", "Press room"],
+  "Contact et presse": ["Formulaire contact", "Press room"],
 };
 
 function normalizeString(str) {

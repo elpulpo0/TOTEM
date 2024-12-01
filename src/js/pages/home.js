@@ -109,7 +109,7 @@ export function renderHome() {
 
       <!-- Numéro de téléphone cliquable -->
       <div class="phone-container">
-        <p>En cas de découverte d’un animal de la faune sauvage en détresse dans le Var, contactez</p>
+        <p>En cas de découverte d’un animal de la faune sauvage en détresse dans le Var, contactez nous au:</p>
         <a href="tel:0483650279" class="phone-link">
           <div class="phone-image">
             <img src="images/phone_home.png" alt="Appeler" class="phone-img"/>

@@ -403,7 +403,7 @@ li {
 }
 
 .page-content {
-  margin: 30px;
+  width: 100%;
 }
 
 /* Structure générale de la liste des espèces */
