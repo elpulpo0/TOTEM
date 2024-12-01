@@ -112,28 +112,7 @@ export function renderSituationPACA() {
     </div>
 
     <style>
-      /* Global */
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      .page-content {
-        padding: 20px;
-      }
-
-      .page-title {
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .section-title {
-        font-size: 1.5rem;
-        margin-top: 20px;
-      }
+      
 
       .context-container {
         display: flex;
@@ -205,13 +184,7 @@ export function renderSituationPACA() {
 
       /* Mobile Responsive */
       @media (max-width: 768px) {
-        .page-title {
-          font-size: 1.5rem;
-        }
-
-        .section-title {
-          font-size: 1.3rem;
-        }
+        
 
         .context-container {
           flex-direction: column;

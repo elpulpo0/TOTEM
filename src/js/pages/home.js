@@ -96,11 +96,6 @@ export function renderHome() {
         .caption {
           font-size: 12px; /* Réduit la taille de la légende */
         }
-
-        .phone-img {
-          width: 35px;
-          height: 35px; /* Image encore plus petite sur les petits écrans */
-        }
       }
     </style>
 

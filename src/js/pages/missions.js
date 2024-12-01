@@ -2,17 +2,7 @@ export function renderMissions() {
   return `
     <style>
       @media (max-width: 768px) {
-        /* Suppression des espacements et marges inutiles */
-        .page-content, .section, .columns, .column, .full-width-column {
-          margin: 0;
-          padding: 10;
-        }
-        
-        .page-title, .section-title, h3 {
-          font-size: 1.5rem;
-          text-align: center;
-          margin: 1rem 0;
-        }
+
         
         /* Colonnes en mode mobile */
         .columns {
@@ -24,53 +14,10 @@ export function renderMissions() {
           width: 100%;
           margin-bottom: 1rem; /* Ajouter un espace entre les colonnes */
         }
-
-        
-
-        /* Style pour les listes */
-        ul {
-          padding: 0;
-          list-style: none;
-        }
-
-        li {
-          text-align: left;
-          margin: 0.5rem 0;
-        }
-
-        /* Liens du menu ou autres éléments similaires */
-        .menu-link {
-          display: block;
-          text-align: right;
-          padding: 0;
-          margin: 0;
-          background: transparent;
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .menu-link:hover {
-          background-color: transparent;
-        }
-
-        .full-width-column {
-          width: 100%;
-        }
-
-        .social-icons {
-          display: none; /* Enlever les icônes sociales pour mobile */
-        }
-
-        /* Retirer bordures, marges et padding inutiles */
-        .section-title, .column h3, .menu-items {
-          border: none;
-          outline: none;
-        }
-      }
     </style>
     
     <div class="page-content">
-      <h1 class="page-title">Nos Missions</h1>
+      <h1 class="page-title">Nos missions</h1>
       
       <section id="nos-missions" class="section">
         <h2 class="section-title">Nos missions</h2>

@@ -79,5 +79,33 @@ export function renderEquipe() {
         </div>
       </section>
     </div>
+
+    <style>
+
+      .team-members,
+      .board-members {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptation à la taille de l'écran */
+        gap: 1.5rem; /* Espacement plus réduit entre les éléments */
+        margin-top: 2rem;
+      }
+
+      .team-member,
+      .board-member {
+        padding: 1rem;
+        background-color: rgba(158, 178, 196, 0.1);
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      /* Pour les petits écrans */
+      @media (max-width: 600px) {
+        .team-members,
+        .board-members {
+          grid-template-columns: 1fr; /* Afficher les membres sur une seule colonne sur mobile */
+        
+        }
+      }
+    </style>
   `;
 }
