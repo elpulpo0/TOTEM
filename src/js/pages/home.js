@@ -13,20 +13,6 @@ export function renderHome() {
         box-sizing: border-box;
       }
 
-      .page-title {
-        font-size: 50px;
-        margin-bottom: 20px;
-        font-weight: bold;
-      }
-
-      /* Conteneur de l'image sans bordure pour la légende */
-      .bird-image-container {
-        display: inline-block;
-        margin: 20px auto; /* Centrage de l'ovale */
-        max-width: 80vw; /* Limite la taille du conteneur à 80% de la largeur de la fenêtre */
-        max-height: 80vh; /* Limite la hauteur à 80% de la hauteur de la fenêtre */
-      }
-
       /* Image avec bordure ovale */
       .bird-image {
         width: 100%; /* L'image occupe toute la largeur de son conteneur */
@@ -42,20 +28,8 @@ export function renderHome() {
         margin-top: 10px;
       }
 
-      /* Numéro de téléphone avec l'icône */
-      .phone-container {
-        margin-top: 20px;
-      }
-
-      .phone-link {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        color: black;
-      }
-
       .phone-image {
+      margin-top: 20px;
         margin-right: 10px;
       }
 
@@ -65,9 +39,7 @@ export function renderHome() {
 
       /* Mobile-specific styles */
       @media (max-width: 768px) {
-        .page-title {
-          font-size: 30px; /* Taille réduite pour les petits écrans */
-        }
+        
 
         .bird-image-container {
           max-width: 90vw; /* Légère réduction de la taille pour s'adapter mieux sur petits écrans */

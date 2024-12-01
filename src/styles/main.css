@@ -526,11 +526,14 @@ li {
 .legal-link {
   color: white;
   text-decoration: none;
+  font-style: italic;
 }
 
 .legal-link:hover {
-  text-decoration: underline;
+  color: var(--color-orange); /* Assurez-vous que la variable est définie dans votre root */
+  text-decoration: none; /* Retire la sous-ligne */
 }
+
 
 .section_lost {
   margin-top: 80px;

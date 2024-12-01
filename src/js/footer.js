@@ -16,7 +16,7 @@ export function footer() {
   footerText.className = "footer-text";
   footerText.innerHTML = `
     Association TOTEM – © Copyright 2024 – 
-    <a href="#mentions" class="footer-link">Mentions légales et politique de confidentialité</a> – 
+    <a href="#mentions" class="legal-link">Mentions légales et politique de confidentialité</a> – 
     Tous droits réservés
   `;
 
