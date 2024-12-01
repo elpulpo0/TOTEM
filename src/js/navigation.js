@@ -1,54 +1,81 @@
 export const menuStructure = {
-  'Nos Missions': ['Nos missions', 'Nos outils'],
-  'L\'équipe': ['Les fondatrices', 'Le conseil d\'administration'],
-  'La situation en PACA': ['Des espèces à enjeux', 'Le contexte', 'Quelques chiffres'],
-  'Nos actions et nos projets': ['La ligne SOS', 'Le CDS du var', 'Le CDS des Alpes Maritimes'],
-  'Dons et Adhésion': {
-    'Appel au don CDS Var': ['Project book', 'Hello asso Don'],
-    'Adhésion totem': ['Statuts', 'Hello asso Adhésion']
+  "Nos Missions": ["Nos missions", "Nos outils"],
+  "L'équipe": ["Les fondatrices", "Le conseil d'administration"],
+  "La situation en PACA": [
+    "Des espèces à enjeux",
+    "Le contexte",
+    "Quelques chiffres",
+  ],
+  "Nos actions et nos projets": [
+    "La ligne SOS",
+    "Le CDS du var",
+    "Le CDS des Alpes Maritimes",
+  ],
+  "Dons et Adhésion": {
+    "Appel au don CDS Var": ["Project book", "Hello asso Don"],
+    "Adhésion totem": ["Statuts", "Hello asso Adhésion"],
   },
-  'Contact & Presse': ['Formulaire contact', 'Press room']
+  "Contact & Presse": ["Formulaire contact", "Press room"],
 };
 
-export function createNavigation() {
-  const nav = document.getElementById('main-nav');
-  const navContainer = document.createElement('div');
-  navContainer.className = 'nav-container';
+function normalizeString(str) {
+  // Remplacer les accents, apostrophes par un tiret
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // Enlever les accents
+    .replace(/['\’]/g, "-") // Remplacer les apostrophes par des tirets
+    .toLowerCase()
+    .replace(/ /g, "-"); // Remplacer les espaces par des tirets
+}
 
-  const menuList = document.createElement('ul');
-  menuList.className = 'menu-items';
+export function createNavigation() {
+  const nav = document.getElementById("main-nav");
+  const navContainer = document.createElement("div");
+  navContainer.className = "nav-container";
+
+  const menuList = document.createElement("ul");
+  menuList.className = "menu-items";
 
   // Création des éléments du menu
   Object.entries(menuStructure).forEach(([mainItem, subItems]) => {
-    const menuItem = document.createElement('li');
-    menuItem.className = 'menu-item';
+    const menuItem = document.createElement("li");
+    menuItem.className = "menu-item";
 
-    const mainLink = document.createElement('a');
-    mainLink.href = `#${mainItem.toLowerCase().replace(/ /g, '-')}`;
-    mainLink.className = 'menu-link';
+    const mainLink = document.createElement("a");
+    const normalizedMainItem = normalizeString(mainItem);
+    mainLink.href = `#${normalizedMainItem}`;
+    mainLink.className = "menu-link";
     mainLink.textContent = mainItem;
-    mainLink.addEventListener('click', (e) => {
+    mainLink.addEventListener("click", (e) => {
       e.preventDefault();
-      window.location.hash = mainItem.toLowerCase().replace(/ /g, '-');
+      window.location.hash = normalizedMainItem;
     });
     menuItem.appendChild(mainLink);
 
     if (subItems) {
-      const submenu = document.createElement('ul');
-      submenu.className = 'submenu';
+      const submenu = document.createElement("ul");
+      submenu.className = "submenu";
 
       if (Array.isArray(subItems)) {
-        subItems.forEach(subItem => {
-          createSubmenuItem(submenu, subItem, mainItem);
+        subItems.forEach((subItem) => {
+          createSubmenuItem(submenu, subItem, normalizedMainItem);
         });
       } else {
         Object.entries(subItems).forEach(([subItem, subSubItems]) => {
-          const subMenuItem = createSubmenuItem(submenu, subItem, mainItem);
+          const subMenuItem = createSubmenuItem(
+            submenu,
+            subItem,
+            normalizedMainItem
+          );
           if (subSubItems) {
-            const subSubmenu = document.createElement('ul');
-            subSubmenu.className = 'submenu';
-            subSubItems.forEach(subSubItem => {
-              createSubmenuItem(subSubmenu, subSubItem, `${mainItem}/${subItem}`);
+            const subSubmenu = document.createElement("ul");
+            subSubmenu.className = "submenu";
+            subSubItems.forEach((subSubItem) => {
+              createSubmenuItem(
+                subSubmenu,
+                subSubItem,
+                `${normalizedMainItem}/${subItem}`
+              );
             });
             subMenuItem.appendChild(subSubmenu);
           }
@@ -62,28 +89,28 @@ export function createNavigation() {
   });
 
   // Ajout des icônes sociales
-  const socialIcons = document.createElement('div');
-  socialIcons.className = 'social-icons';
-  
-  const facebookLink = document.createElement('a');
-  facebookLink.href = '#';
-  facebookLink.className = 'social-icon';
+  const socialIcons = document.createElement("div");
+  socialIcons.className = "social-icons";
+
+  const facebookLink = document.createElement("a");
+  facebookLink.href = "#";
+  facebookLink.className = "social-icon";
   facebookLink.innerHTML = '<i class="fab fa-facebook"></i>';
-  
-  const instagramLink = document.createElement('a');
-  instagramLink.href = '#';
-  instagramLink.className = 'social-icon';
+
+  const instagramLink = document.createElement("a");
+  instagramLink.href = "#";
+  instagramLink.className = "social-icon";
   instagramLink.innerHTML = '<i class="fab fa-instagram"></i>';
-  
+
   socialIcons.appendChild(facebookLink);
   socialIcons.appendChild(instagramLink);
   menuList.appendChild(socialIcons);
 
-  const hamburger = document.createElement('button');
-  hamburger.className = 'hamburger';
-  hamburger.innerHTML = '☰';
-  hamburger.addEventListener('click', () => {
-    menuList.classList.toggle('active');
+  const hamburger = document.createElement("button");
+  hamburger.className = "hamburger";
+  hamburger.innerHTML = "☰";
+  hamburger.addEventListener("click", () => {
+    menuList.classList.toggle("active");
   });
 
   navContainer.appendChild(hamburger);
@@ -91,17 +118,19 @@ export function createNavigation() {
   nav.appendChild(navContainer);
 }
 
-function createSubmenuItem(submenu, text, parentPath = '') {
-  const item = document.createElement('li');
-  item.className = 'submenu-item';
-  const link = document.createElement('a');
-  const path = parentPath ? `${parentPath}/${text}` : text;
-  link.href = `#${path.toLowerCase().replace(/ /g, '-')}`;
-  link.className = 'submenu-link';
+function createSubmenuItem(submenu, text, parentPath = "") {
+  const item = document.createElement("li");
+  item.className = "submenu-item";
+  const link = document.createElement("a");
+  const normalizedPath = parentPath
+    ? `${parentPath}/${normalizeString(text)}`
+    : normalizeString(text);
+  link.href = `#${normalizedPath}`;
+  link.className = "submenu-link";
   link.textContent = text;
-  link.addEventListener('click', (e) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.hash = path.toLowerCase().replace(/ /g, '-');
+    window.location.hash = normalizedPath;
   });
   item.appendChild(link);
   submenu.appendChild(item);

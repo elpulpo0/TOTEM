@@ -356,3 +356,58 @@ main {
     padding: 1.5rem;
   }
 }
+
+.section {
+  margin-bottom: 30px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+#nos-missions h3 {
+  margin-top: 0;
+}
+
+.full-width-column {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#nos-outils p {
+  margin-top: 20px;
+}
+
+.team-member-photo, .board-member-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-member, .board-member {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.team-member h3, .board-member h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+/* Masquer les puces des listes */
+ul {
+  list-style-type: none;
+  padding-left: 0; /* Supprimer l'espace par défaut à gauche */
+}
+
+li {
+  padding-left: 0; /* Supprimer le retrait par défaut des éléments de liste */
+}

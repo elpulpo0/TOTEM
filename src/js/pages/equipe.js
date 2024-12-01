@@ -7,27 +7,70 @@ export function renderEquipe() {
         <h2 class="section-title">Les fondatrices</h2>
         <div class="team-members">
           <div class="team-member">
-            <h3>Fondatrice 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+            <img src="images/alice-brunet.jpg" alt="Alice Brunet" class="team-member-photo">
+            <h3>Alice Brunet, Présidente</h3>
+            <ul>
+              <li>Vétérinaire depuis plus de 10 ans</li>
+              <li>Grande expérience dans le soin à la faune sauvage captive</li>
+              <li>DIE Santé de la Faune Sauvage non captive (Diplôme Inter Ecoles Vétérinaires)</li>
+            </ul>
           </div>
           <div class="team-member">
-            <h3>Fondatrice 2</h3>
-            <p>Cras porta condimentum velit, et eleifend ex. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <img src="images/jennifer-jolicard.jpg" alt="Jennifer Jolicard" class="team-member-photo">
+            <h3>Jennifer Jolicard, Vice-Présidente</h3>
+            <ul>
+              <li>Assistante vétérinaire pendant 13 ans</li>
+              <li>Médiatrice par l’animal</li>
+              <li>Créatrice et gestionnaire d’un centre de soin à la faune sauvage (CSAM)</li>
+            </ul>
           </div>
         </div>
       </section>
 
       <section id="le-conseil-d-administration" class="section">
         <h2 class="section-title">Le conseil d'administration</h2>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <div class="board-members">
           <div class="board-member">
-            <h3>Membre 1</h3>
-            <p>Lorem ipsum dolor sit amet</p>
+            <img src="images/amelie-nicolau.jpg" alt="Amélie Nicolau" class="board-member-photo">
+            <h3>Amélie Nicolau, Térosière</h3>
+            <ul>
+              <li>Vétérinaire</li>
+            </ul>
           </div>
           <div class="board-member">
-            <h3>Membre 2</h3>
-            <p>Consectetur adipiscing elit</p>
+            <img src="images/virginie-fernandes.jpg" alt="Virginie Fernandes" class="board-member-photo">
+            <h3>Virginie Fernandes, Sécrétaire (Pôle communication)</h3>
+            <ul>
+              <li>Conseillère en marketing et communication</li>
+            </ul>
+          </div>
+          <div class="board-member">
+            <img src="images/barbara-sesma.jpg" alt="Barbara Sesma" class="board-member-photo">
+            <h3>Barbara Sesma, Administratrice (Pôle communication)</h3>
+            <ul>
+              <li>Responsable commerciale en régie publicitaire</li>
+            </ul>
+          </div>
+          <div class="board-member">
+            <img src="images/julien-veys.jpg" alt="Julien Veys" class="board-member-photo">
+            <h3>Julien Veys, Administrateur</h3>
+            <ul>
+              <li>Vétérinaire</li>
+            </ul>
+          </div>
+          <div class="board-member">
+            <img src="images/mathilde-prevot.jpg" alt="Mathilde Prévot" class="board-member-photo">
+            <h3>Mathilde Prévot, Administratrice</h3>
+            <ul>
+              <li>Vétérinaire</li>
+            </ul>
+          </div>
+          <div class="board-member">
+            <img src="images/marine-afchain.jpg" alt="Marine Afchain" class="board-member-photo">
+            <h3>Marine Afchain, Administratrice</h3>
+            <ul>
+              <li>Musicothérapeute</li>
+            </ul>
           </div>
         </div>
       </section>
