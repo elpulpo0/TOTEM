@@ -21,5 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
   router.addRoute('la-situation-en-paca', renderSituationPACA);
   router.addRoute('nos-actions-et-nos-projets', renderActions);
   router.addRoute('dons-et-adhesion', renderDons);
-  router.addRoute('contact-presse', renderContact);
+  router.addRoute('contact-et-presse', renderContact);
 });

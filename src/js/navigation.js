@@ -8,14 +8,13 @@ export const menuStructure = {
   ],
   "Nos actions et nos projets": [
     "La ligne SOS",
-    "Le CDS du var",
-    "Le CDS des Alpes Maritimes",
+    "Les centres de soins"
   ],
   "Dons et Adhésion": {
     "Appel au don CDS Var": ["Project book", "Hello asso Don"],
     "Adhésion totem": ["Statuts", "Hello asso Adhésion"],
   },
-  "Contact & Presse": ["Formulaire contact", "Press room"],
+  "Contact et Presse": ["Formulaire contact", "Press room"],
 };
 
 function normalizeString(str) {
@@ -93,12 +92,13 @@ export function createNavigation() {
   socialIcons.className = "social-icons";
 
   const facebookLink = document.createElement("a");
-  facebookLink.href = "#";
+  facebookLink.href =
+    "https://www.facebook.com/people/TOTEM-PACA/61553599295837/";
   facebookLink.className = "social-icon";
   facebookLink.innerHTML = '<i class="fab fa-facebook"></i>';
 
   const instagramLink = document.createElement("a");
-  instagramLink.href = "#";
+  instagramLink.href = "https://www.instagram.com/totempaca/";
   instagramLink.className = "social-icon";
   instagramLink.innerHTML = '<i class="fab fa-instagram"></i>';
 

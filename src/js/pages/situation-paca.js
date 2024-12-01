@@ -6,6 +6,10 @@ export function renderSituationPACA() {
       <section id="des-especes-a-enjeux" class="section">
         <h2 class="section-title">Des espèces à enjeux</h2>
         <p>Le Var regorge d’espèces à enjeux majeurs :</p>
+        <div class="image-container">
+          <img src="images/Vautours-fauves-copyright-LPO-Herault.jpg" alt="Vautours fauves" class="species-image">
+          <p class="image-caption"><em>Vautours fauves - Copyright LPO Hérault</em></p>
+        </div>
         <div class="species-list">
           <div class="species-category">
             <h3 class="species-title">Espèces de chauves-souris</h3>
@@ -54,32 +58,91 @@ export function renderSituationPACA() {
       </section>
 
       <section id="quelques-chiffres" class="section">
-  <h2 class="section-title">Quelques chiffres</h2>
-  <div class="statistics">
-    <div class="stat-card">
-      <h3>686</h3>
-      <p>C’est le nombre d’espèces observées sur la région SUD</p>
-      <p>567 espèces d’oiseaux et 119 espèces de mammifères.</p>
-      <p><em>*Source : Biodivpaca LPO</em></p>
-    </div>
-    <div class="stat-card">
-      <h3>4,242</h3>
-      <p>C’est le nombre de prises en charge toutes espèces confondues en 2022</p>
-      <p>(1242 au CSAM et 3000 à la LPO PACA) avec un pic d’accueils entre mai et août.</p>
-    </div>
-  </div>
+        <h2 class="section-title">Quelques chiffres</h2>
+        <div class="statistics">
+          <div class="stat-card">
+            <h3>686</h3>
+            <p>C’est le nombre d’espèces observées sur la région SUD</p>
+            <p>567 espèces d’oiseaux et 119 espèces de mammifères.</p>
+            <p><em>*Source : Biodivpaca LPO</em></p>
+          </div>
+          <div class="stat-card">
+            <h3>800</h3>
+            <p>C'est le nombre d'appels reçus sur la ligne SOS faune sauvage de Totem sur la saison 2024 pour les animaux du Var</p>
+          </div>
+          <div class="stat-card">
+            <h3>4,229</h3>
+            <p>C’est le nombre de prises en charge toutes espèces confondues en 2023</p>
+            <p>(1972 à la LPO PACA et 1257 au CSAM) avec un pic d’accueils entre mai et août.</p>
+          </div>
+        </div>
 
-  <div class="additional-info">
-    <p>Chaque année le territoire PACA voit passer de nombreuses espèces migratrices provenant de toute la France.</p>
-    <p>Pour la faune sauvage en détresse en 2022, c’est :</p>
-    <ul>
-      <li>Près de 10 000 appels traités par les centres de soins LPO PACA à Buoux et CSAM à St Cézaire-sur-Siagne.</li>
-      <li>Plusieurs centaines d’animaux sans structures dimensionnées pour les accueillir, donc sans prises en charge par des centres de soins.</li>
-      <li>Sans compter les animaux amenés en clinique vétérinaire, qui, trop blessés ou affaiblis, n’iront jamais en centre de soin.</li>
-    </ul>
-  </div>
-</section>
+        <div class="additional-info">
+          <p>Chaque année le territoire PACA voit passer de nombreuses espèces migratrices provenant de toute la France.</p>
+          <p>Pour la faune sauvage en détresse en 2023, c’est :</p>
+          <ul>
+            <li>Près de 10 000 appels traités par les centres de soins LPO PACA à Buoux et CSAM à St Cézaire-sur-Siagne.</li>
+            <li>Plusieurs centaines d’animaux sans structures dimensionnées pour les accueillir, donc sans prises en charge par des centres de soins.</li>
+            <li>Sans compter les animaux amenés en clinique vétérinaire, qui, trop blessés ou affaiblis, n’iront jamais en centre de soin.</li>
+          </ul>
+        </div>
+
+        <!-- Images côte à côte -->
+        <div class="image-gallery">
+          <div class="image-item">
+            <img src="images/goeland-juvenile-copyright-Renaud-Vauchot.jpg" alt="Goéland juvénile" class="gallery-image">
+            <p class="image-caption"><em>Goéland juvénile - Copyright Renaud Vauchot</em></p>
+          </div>
+          <div class="image-item">
+            <img src="images/heron-garde-boeufs-copyright-Renaud-Vauchot.jpg" alt="Héron garde-boeufs" class="gallery-image">
+            <p class="image-caption"><em>Héron garde-boeufs - Copyright Renaud Vauchot</em></p>
+          </div>
+        </div>
+
+      </section>
 
     </div>
+
+    <style>
+      /* Style pour l'image et la légende */
+      .image-container {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .species-image {
+        width: 80%;  /* Limite la largeur de l'image à 80% du container */
+        height: auto; /* Maintient les proportions de l'image */
+      }
+
+      .image-caption {
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 10px; /* Espace entre l'image et la légende */
+      }
+
+      /* Galerie d'images côte à côte */
+      .image-gallery {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .image-item {
+        width: 48%; /* Taille des images à 50% de la largeur de l'espace disponible */
+        text-align: center;
+      }
+
+      .gallery-image {
+        width: 50%; /* Les images remplissent le conteneur à 100% de leur taille */
+        height: auto;
+      }
+
+      .image-caption {
+        font-size: 0.8em;
+        color: #666;
+        margin-top: 10px; /* Espace entre l'image et la légende */
+      }
+    </style>
   `;
 }
