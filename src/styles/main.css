@@ -309,60 +309,6 @@ main {
   }
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .menu-items {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--color-blue);
-    padding: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-
-  .menu-items.active {
-    display: flex;
-  }
-
-  .social-icons {
-    margin: 1rem 0;
-    justify-content: center;
-  }
-
-  .submenu {
-    position: static;
-    box-shadow: none;
-    background-color: rgba(255, 255, 255, 0.1);
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  .menu-link:hover {
-    transform: none;
-  }
-
-  .submenu-link {
-    color: var(--color-white);
-  }
-
-  .page-content {
-    padding: 1rem;
-  }
-
-  .section {
-    padding: 1.5rem;
-  }
-}
-
 .section {
   margin-bottom: 30px;
 }
@@ -591,7 +537,7 @@ li {
 /* Adaptation mobile (si nécessaire) */
 @media (max-width: 768px) {
   .logo {
-    height: 30px; /* Réduit la taille du logo sur mobile */
+    height: 60px; /* Réduit la taille du logo sur mobile */
   }
 }
 
@@ -634,3 +580,62 @@ li {
       .image-hero {
         max-height: 100%;
       }
+
+/* Menu Mobile */
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    padding: 15px;
+    right: 0;
+    width: auto;
+    background-color: var(--color-blue);
+    box-shadow: none;
+    z-index: 1000;
+    text-align: right; /* Alignement des liens à droite */
+    border: none; /* Enlève les bordures */
+    outline: none; /* Enlève les contours */
+  }
+
+  .menu-items.active {
+    display: flex;
+  }
+
+  .menu-link.active {
+  background-color: var(--color-orange)bleu;
+  color: var(--color-orange);
+}
+
+  .menu-link,
+  .submenu-link {
+    display: block;
+    text-align: right;
+    padding: 0; /* Supprime les espacements internes */
+    margin: 0; /* Supprime les marges */
+    background: transparent; /* Retire le fond */
+    border: none; /* Retire les bordures */
+    outline: none; /* Retire les contours */
+    text-decoration: none; /* Supprime les soulignements */
+    color: inherit; /* Lien de la même couleur que le texte */
+  }
+
+  .menu-link:hover,
+  .submenu-link:hover {
+    background-color: transparent; /* Retirer le fond au survol */
+  }
+
+  .social-icons {
+    display: none; /* Cache les icônes sociales */
+  }
+
+  .submenu {
+    display: none; /* Cache les sous-menus */
+  }
+}

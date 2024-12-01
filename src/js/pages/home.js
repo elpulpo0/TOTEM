@@ -1,8 +1,6 @@
 export function renderHome() {
   return `
     <style>
-      
-
       .section_home {
         text-align: center;
         margin-top: 20px;
@@ -62,8 +60,47 @@ export function renderHome() {
       }
 
       .phone-img {
-        width: auto; /* Laisse l'image à sa taille réelle */
-        height: auto; /* Laisse l'image à sa taille réelle */
+       width: 40vw;
+      }
+
+      /* Mobile-specific styles */
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 30px; /* Taille réduite pour les petits écrans */
+        }
+
+        .bird-image-container {
+          max-width: 90vw; /* Légère réduction de la taille pour s'adapter mieux sur petits écrans */
+          margin: 10px auto; /* Réduit l'espace autour */
+        }
+
+        .caption {
+          font-size: 14px; /* Taille de légende plus petite pour mobile */
+        }
+
+        .phone-container {
+          margin-top: 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .page-title {
+          font-size: 24px; /* Taille encore plus petite pour les très petits écrans */
+        }
+
+        .bird-image-container {
+          max-width: 100vw; /* L'image peut occuper toute la largeur sur les très petits écrans */
+          margin: 5px auto;
+        }
+
+        .caption {
+          font-size: 12px; /* Réduit la taille de la légende */
+        }
+
+        .phone-img {
+          width: 35px;
+          height: 35px; /* Image encore plus petite sur les petits écrans */
+        }
       }
     </style>
 
@@ -72,7 +109,7 @@ export function renderHome() {
 
       <!-- Numéro de téléphone cliquable -->
       <div class="phone-container">
-      <p>En cas de découverte d’un animal de la faune sauvage en détresse dans le Var, contactez</p>
+        <p>En cas de découverte d’un animal de la faune sauvage en détresse dans le Var, contactez</p>
         <a href="tel:0483650279" class="phone-link">
           <div class="phone-image">
             <img src="images/phone_home.png" alt="Appeler" class="phone-img"/>

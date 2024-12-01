@@ -112,24 +112,81 @@ export function renderSituationPACA() {
     </div>
 
     <style>
-      /* Style pour l'image et la légende */
-      .image-container {
+      /* Global */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .page-content {
+        padding: 20px;
+      }
+
+      .page-title {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        margin-top: 20px;
+      }
+
+      .context-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .context-card {
+        flex: 1;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        margin: 10px;
+      }
+
+      /* Images */
+      .image-container, .image-section {
         text-align: center;
         margin: 20px 0;
       }
 
       .species-image {
-        width: 80%;  /* Limite la largeur de l'image à 80% du container */
-        height: auto; /* Maintient les proportions de l'image */
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+        border-radius: 8px;
       }
 
       .image-caption {
         font-size: 0.9em;
         color: #666;
-        margin-top: 10px; /* Espace entre l'image et la légende */
+        margin-top: 10px;
       }
 
-      /* Galerie d'images côte à côte */
+      /* Flex Layout for Statistics and Gallery */
+      .statistics {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .stat-card {
+        background: #e3e3e3;
+        padding: 20px;
+        border-radius: 8px;
+        width: 30%;
+        text-align: center;
+      }
+
+      .additional-info {
+        margin-top: 20px;
+      }
+
       .image-gallery {
         display: flex;
         justify-content: space-between;
@@ -137,19 +194,51 @@ export function renderSituationPACA() {
       }
 
       .image-item {
-        width: 48%; /* Taille des images à 50% de la largeur de l'espace disponible */
+        width: 48%;
         text-align: center;
       }
 
       .gallery-image {
-        width: 50%; /* Les images remplissent le conteneur à 100% de leur taille */
+        width: 100%;
         height: auto;
       }
 
-      .image-caption {
-        font-size: 0.8em;
-        color: #666;
-        margin-top: 10px; /* Espace entre l'image et la légende */
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 1.5rem;
+        }
+
+        .section-title {
+          font-size: 1.3rem;
+        }
+
+        .context-container {
+          flex-direction: column;
+        }
+
+        .context-card {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .statistics {
+          flex-direction: column;
+        }
+
+        .stat-card {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .image-gallery {
+          flex-direction: column;
+        }
+
+        .image-item {
+          width: 100%;
+          margin-bottom: 20px;
+        }
       }
     </style>
   `;

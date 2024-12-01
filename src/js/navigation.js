@@ -15,13 +15,12 @@ export const menuStructure = {
 };
 
 function normalizeString(str) {
-  // Remplacer les accents, apostrophes par un tiret
   return str
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // Enlever les accents
-    .replace(/['\’]/g, "-") // Remplacer les apostrophes par des tirets
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/['\’]/g, "-")
     .toLowerCase()
-    .replace(/ /g, "-"); // Remplacer les espaces par des tirets
+    .replace(/ /g, "-");
 }
 
 export function createNavigation() {
@@ -33,14 +32,13 @@ export function createNavigation() {
   const logoContainer = document.createElement("div");
   logoContainer.className = "logo-container";
   const logo = document.createElement("img");
-  logo.src = "images/Logo_totem.png"; // Remplace avec le bon chemin vers ton image
+  logo.src = "images/Logo_totem.png";
   logo.alt = "Totem Logo";
   logo.className = "logo";
 
-  // Rendre le logo cliquable pour retourner à la page d'accueil
   logo.addEventListener("click", (e) => {
     e.preventDefault();
-    window.location.hash = ""; // Remet le hash à vide pour revenir à l'accueil
+    window.location.hash = "";
   });
 
   logoContainer.appendChild(logo);
@@ -49,7 +47,6 @@ export function createNavigation() {
   const menuList = document.createElement("ul");
   menuList.className = "menu-items";
 
-  // Création des éléments du menu
   Object.entries(menuStructure).forEach(([mainItem, subItems]) => {
     const menuItem = document.createElement("li");
     menuItem.className = "menu-item";
@@ -62,6 +59,8 @@ export function createNavigation() {
     mainLink.addEventListener("click", (e) => {
       e.preventDefault();
       window.location.hash = normalizedMainItem;
+      // Fermer le menu principal après clic sur un lien
+      menuList.classList.remove("active");
     });
     menuItem.appendChild(mainLink);
 
@@ -101,7 +100,7 @@ export function createNavigation() {
     menuList.appendChild(menuItem);
   });
 
-  // Ajout des icônes sociales
+  // Icônes sociales
   const socialIcons = document.createElement("div");
   socialIcons.className = "social-icons";
 
@@ -120,6 +119,7 @@ export function createNavigation() {
   socialIcons.appendChild(instagramLink);
   menuList.appendChild(socialIcons);
 
+  // Bouton hamburger
   const hamburger = document.createElement("button");
   hamburger.className = "hamburger";
   hamburger.innerHTML = "☰";
@@ -127,7 +127,7 @@ export function createNavigation() {
     menuList.classList.toggle("active");
   });
 
-  // Ajout du logo et du menu dans la nav
+  // Ajout du logo, hamburger et menu à la navigation
   navContainer.appendChild(logoContainer);
   navContainer.appendChild(hamburger);
   navContainer.appendChild(menuList);
@@ -147,6 +147,13 @@ function createSubmenuItem(submenu, text, parentPath = "") {
   link.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.hash = normalizedPath;
+    // Fermer le sous-menu après clic sur un lien
+    submenu.classList.remove("active");
+    // Fermer le menu principal si on est dans le mobile
+    const menuList = document.querySelector(".menu-items");
+    if (menuList) {
+      menuList.classList.remove("active");
+    }
   });
   item.appendChild(link);
   submenu.appendChild(item);
