@@ -75,7 +75,7 @@ export function renderHome() {
       <p>En cas de découverte d’un animal de la faune sauvage en détresse dans le Var, contactez</p>
         <a href="tel:0483650279" class="phone-link">
           <div class="phone-image">
-            <img src="images/phone.png" alt="Appeler" class="phone-img"/>
+            <img src="images/phone_home.png" alt="Appeler" class="phone-img"/>
           </div>
         </a>
       </div>
