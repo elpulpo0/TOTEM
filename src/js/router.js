@@ -42,7 +42,14 @@ export class Router {
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Récupère la position de l'élément
+          const offsetTop = element.offsetTop;
+          // Ajuste le défilement pour ne pas cacher l'élément sous le menu
+          const offset = 180; // Par exemple, la hauteur du menu fixe
+          window.scrollTo({
+            top: offsetTop - offset,
+            behavior: 'smooth'
+          });
         }
       }, 100);
     }

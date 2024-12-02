@@ -7,10 +7,7 @@ export const menuStructure = {
     "Quelques chiffres",
   ],
   "Nos actions et nos projets": ["La ligne SOS", "Les centres de soins"],
-  "Dons et adhésions": {
-    "Appel au don CDS Var": ["Project book", "Hello asso Don"],
-    "Adhésion totem": ["Statuts", "Hello asso Adhésion"],
-  },
+  "Dons et adhésions": ["Appel au don", "Adhésion"],
   "Contact et presse": ["Formulaire contact", "Press room"],
 };
 
