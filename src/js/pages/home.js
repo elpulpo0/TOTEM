@@ -87,8 +87,8 @@ export function renderHome() {
       <!-- Conteneur de l'image d'oiseau sans bordure -->
       <div class="bird-image-container">
         <figure>
-          <img src="images/Cormoran-juvenile-copyright-Anne-Hirsch.jpg" alt="Cormoran-juvenile-copyright-Anne-Hirsch" class="bird-image" />
-          <figcaption class="caption">Cormoran juvénile, photo prise par Anne Hirsch</figcaption>
+          <img src="images/Grand-cormoran-copyright-Anne-Hirsch.jpg" alt="Grand-cormoran-copyright-Anne-Hirsch" class="bird-image" />
+          <figcaption class="caption">Grand cormoran, photo prise par Anne Hirsch</figcaption>
         </figure>
       </div>
     </div>
