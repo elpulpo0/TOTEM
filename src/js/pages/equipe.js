@@ -35,42 +35,36 @@ export function renderEquipe() {
         <h2 class="section-title">Le conseil d'administration</h2>
         <div class="board-members">
           <div class="board-member">
-            <img src="images/amelie-nicolau.jpg" alt="Amélie Nicolau" class="board-member-photo">
             <h3>Amélie Nicolau, Térosière</h3>
             <ul>
               <li>Vétérinaire</li>
             </ul>
           </div>
           <div class="board-member">
-            <img src="images/virginie-fernandes.jpg" alt="Virginie Fernandes" class="board-member-photo">
             <h3>Virginie Fernandes, Sécrétaire (Pôle communication)</h3>
             <ul>
               <li>Conseillère en marketing et communication</li>
             </ul>
           </div>
           <div class="board-member">
-            <img src="images/barbara-sesma.jpg" alt="Barbara Sesma" class="board-member-photo">
             <h3>Barbara Sesma, Administratrice (Pôle communication)</h3>
             <ul>
               <li>Responsable commerciale en régie publicitaire</li>
             </ul>
           </div>
           <div class="board-member">
-            <img src="images/julien-veys.jpg" alt="Julien Veys" class="board-member-photo">
             <h3>Julien Veys, Administrateur</h3>
             <ul>
               <li>Vétérinaire</li>
             </ul>
           </div>
           <div class="board-member">
-            <img src="images/mathilde-prevot.jpg" alt="Mathilde Prévot" class="board-member-photo">
             <h3>Mathilde Prévot, Administratrice</h3>
             <ul>
               <li>Vétérinaire</li>
             </ul>
           </div>
           <div class="board-member">
-            <img src="images/marine-afchain.jpg" alt="Marine Afchain" class="board-member-photo">
             <h3>Marine Afchain, Administratrice</h3>
             <ul>
               <li>Musicothérapeute</li>
@@ -81,13 +75,18 @@ export function renderEquipe() {
     </div>
 
     <style>
-
       .team-members,
       .board-members {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptation à la taille de l'écran */
-        gap: 1.5rem; /* Espacement plus réduit entre les éléments */
+        gap: 1.5rem; /* Espacement entre les éléments */
         margin-top: 2rem;
+      }
+
+      .team-members {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .board-members {
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .team-member,
