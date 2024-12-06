@@ -103,7 +103,7 @@ export function renderActions() {
       }
 
       .phone-img {
-        width: 90%;
+        width: 50%;
         height: auto; /* Laisse l'image à sa taille réelle */
       }
 

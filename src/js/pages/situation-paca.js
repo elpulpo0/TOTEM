@@ -112,8 +112,6 @@ export function renderSituationPACA() {
     </div>
 
     <style>
-      
-
       .context-container {
         display: flex;
         justify-content: space-between;
@@ -129,7 +127,7 @@ export function renderSituationPACA() {
       }
 
       /* Images */
-      .image-container, .image-section {
+      .image-container {
         text-align: center;
         margin: 20px 0;
       }
@@ -179,13 +177,13 @@ export function renderSituationPACA() {
 
       .gallery-image {
         width: 100%;
+        max-width: 400px;
         height: auto;
+        border-radius: 8px;
       }
 
       /* Mobile Responsive */
       @media (max-width: 768px) {
-        
-
         .context-container {
           flex-direction: column;
         }
